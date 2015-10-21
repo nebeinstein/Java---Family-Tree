@@ -16,4 +16,9 @@ public class Unknown implements Tree {
 		return 0;
 	}
 
+	@Override
+	public String getName() {
+		return null;
+	}
+
 }

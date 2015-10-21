@@ -2,7 +2,7 @@ package tree;
 
 public class Person implements Tree {
 
-	String[] name;
+	private String[] name;
 	public boolean gender;
 	String[] lived;
 	Tree mother;
@@ -31,6 +31,16 @@ public class Person implements Tree {
 		} else {
 			return (1 + father.gens());
 		}
+	}
+
+	@Override
+	public String getName() {
+		String finalName = "";
+		for (String s:name){
+			finalName += s + " ";
+		}
+//		System.out.println(finalName);
+		return finalName;
 	}
 
 }
