@@ -47,7 +47,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		panel.add(nameLabel1);
 
 		nameBox1.setLocation(145, 39);
-		nameBox1.setSize(224, 25);
+		nameBox1.setSize(274, 25);
 		panel.add(nameBox1);
 
 		nameLabel2.setLocation(39, 79);
@@ -56,7 +56,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		panel.add(nameLabel2);
 
 		nameBox2.setLocation(145, 79);
-		nameBox2.setSize(224, 25);
+		nameBox2.setSize(274, 25);
 		panel.add(nameBox2);
 
 		nameLabel3.setLocation(39, 119);
@@ -65,7 +65,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		panel.add(nameLabel3);
 
 		nameBox3.setLocation(145, 119);
-		nameBox3.setSize(224, 25);
+		nameBox3.setSize(274, 25);
 		panel.add(nameBox3);
 
 		motherLabel.setLocation(39, 159);
@@ -74,7 +74,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		panel.add(motherLabel);
 
 		motherBox.setLocation(145, 159);
-		motherBox.setSize(224, 25);
+		motherBox.setSize(274, 25);
 		motherBox.addItem("--- Unknown ---");
 		panel.add(motherBox);
 
@@ -84,19 +84,24 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		panel.add(fatherLabel);
 
 		fatherBox.setLocation(145, 199);
-		fatherBox.setSize(224, 25);
+		fatherBox.setSize(274, 25);
 		fatherBox.addItem("--- Unknown ---");
 		panel.add(fatherBox);
 
-		cancel.setLocation(380, 325);
+		cancel.setLocation(373, 325);
 		cancel.setSize(96, 25);
 		cancel.addActionListener(ctrl);
 		panel.add(cancel);
 
-		save.setLocation(264, 325);
-		save.setSize(96, 25);
-		save.addActionListener(ctrl);
-		panel.add(save);
+		save1.setLocation(202, 325);
+		save1.setSize(146, 25);
+		save1.addActionListener(ctrl);
+		panel.add(save1);
+		
+		save2.setLocation(31, 325);
+		save2.setSize(146, 25);
+		save2.addActionListener(ctrl);
+		panel.add(save2);
 	}
 
 	@Override

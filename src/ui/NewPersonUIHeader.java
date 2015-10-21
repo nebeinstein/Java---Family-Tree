@@ -37,5 +37,6 @@ public class NewPersonUIHeader extends JFrame {
 
 	JButton browse = new JButton("Browse");
 	public JButton cancel = new JButton("Cancel");
-	JButton save = new JButton("Save");
+	public JButton save1 = new JButton("Save and Close");
+	public JButton save2 = new JButton("Save and Make Another");
 }
