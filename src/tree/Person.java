@@ -19,7 +19,7 @@ public class Person implements Tree {
 		mom = findPersonByName(Mother);
 		dad = findPersonByName(Father);
 		me = Boolean.getBoolean(Me);
-		
+
 	}
 
 	public Person(String[] personData) {
@@ -30,7 +30,7 @@ public class Person implements Tree {
 		mom = findPersonByName(personData[i++]);
 		dad = findPersonByName(personData[i++]);
 		me = Boolean.getBoolean(personData[i++]);
-		
+
 	}
 
 	public String toString() {
@@ -45,15 +45,17 @@ public class Person implements Tree {
 	}
 
 	private Tree findPersonByName(String personName) {
-		Tree p = new Unknown();
-		int i = 0;
-		while (i < Main.DUMDUM.people.size()) {
-			Tree t = Main.DUMDUM.people.get(i);
-			if (t.getName().equals(personName))
-				p = t;
-			i++;
-		}
-		return p;
+		Tree person = new Unknown();
+//		if (!(personName.equals("Unknown"))) {
+//			int i = 0;
+//			while (i < Main.DUMDUM.people.size()) {
+//				Tree tree = Main.DUMDUM.people.get(i);
+//				if (tree.getName().equals(personName))
+//					person = tree;
+//				i++;
+//			}
+//		}
+		return person;
 	}
 
 	@Override

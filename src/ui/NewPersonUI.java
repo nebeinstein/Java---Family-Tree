@@ -37,7 +37,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-		personPanel.setSize(500,400);
+		personPanel.setSize(500, 400);
 		personPanel.setLayout(null);
 		add(personPanel, BorderLayout.CENTER);
 
@@ -68,25 +68,57 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		lastNameBox.setSize(274, 25);
 		personPanel.add(lastNameBox);
 
-		motherLabel.setLocation(39, 159);
+		genderLabel.setLocation(39, 159);
+		genderLabel.setSize(95, 25);
+		genderLabel.setHorizontalAlignment(JLabel.CENTER);
+		personPanel.add(genderLabel);
+
+		genderBox.setLocation(145, 159);
+		genderBox.setSize(274, 25);
+		personPanel.add(genderBox);
+
+		motherLabel.setLocation(39, 199);
 		motherLabel.setSize(96, 25);
 		motherLabel.setHorizontalAlignment(JLabel.CENTER);
 		personPanel.add(motherLabel);
 
-		motherBox.setLocation(145, 159);
+		motherBox.setLocation(145, 199);
 		motherBox.setSize(274, 25);
-		motherBox.addItem("--- Unknown ---");
+		motherBox.addItem("Unknown");
 		personPanel.add(motherBox);
 
-		fatherLabel.setLocation(39, 199);
+		fatherLabel.setLocation(39, 239);
 		fatherLabel.setSize(96, 25);
 		fatherLabel.setHorizontalAlignment(JLabel.CENTER);
 		personPanel.add(fatherLabel);
 
-		fatherBox.setLocation(145, 199);
+		fatherBox.setLocation(145, 239);
 		fatherBox.setSize(274, 25);
-		fatherBox.addItem("--- Unknown ---");
+		fatherBox.addItem("Unknown");
 		personPanel.add(fatherBox);
+
+		isMeLabel.setLocation(39, 279);
+		isMeLabel.setSize(96, 25);
+		isMeLabel.setHorizontalAlignment(JLabel.CENTER);
+		personPanel.add(isMeLabel);
+
+		yesLabel.setLocation(145, 279);
+		yesLabel.setSize(75, 25);
+		yesLabel.setHorizontalAlignment(JLabel.LEFT);
+		personPanel.add(yesLabel);
+
+		yesButton.setLocation(170, 282);
+		yesButton.setSize(20, 20);
+		personPanel.add(yesButton);
+
+		noLabel.setLocation(200, 279);
+		noLabel.setSize(75, 25);
+		noLabel.setHorizontalAlignment(JLabel.LEFT);
+		personPanel.add(noLabel);
+
+		noButton.setLocation(225, 282);
+		noButton.setSize(20, 20);
+		personPanel.add(noButton);
 
 		cancelButton.setLocation(373, 325);
 		cancelButton.setSize(96, 25);
@@ -97,7 +129,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		saveAndCloseButton.setSize(146, 25);
 		saveAndCloseButton.addActionListener(ctrl);
 		personPanel.add(saveAndCloseButton);
-		
+
 		saveAndAnotherButton.setLocation(31, 325);
 		saveAndAnotherButton.setSize(146, 25);
 		saveAndAnotherButton.addActionListener(ctrl);

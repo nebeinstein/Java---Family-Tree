@@ -31,9 +31,9 @@ public class NewPersonUIController implements Controller {
 
 	private String getName() {
 		String name = "";
-		name += ui.firstNameBox.getText() + " ";
+		name += ui.firstNameBox.getText() + ", ";
 		if (!(ui.midNameBox.getText().equals("")))
-			name += ui.midNameBox.getText() + " ";
+			name += ui.midNameBox.getText() + ", ";
 		name += ui.lastNameBox.getText();
 		return name;
 	}
