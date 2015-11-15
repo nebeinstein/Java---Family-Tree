@@ -13,9 +13,45 @@ public class NewPersonUIController implements Controller {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == ui.cancel)
+		if (e.getSource() == ui.cancelButton)
 			ui.dispose();
 
+	}
+
+	public String[] getPersonInformation() {
+		String[] personData = new String[6];
+		personData[0] = getName();
+		personData[1] = getGender();
+		personData[2] = getLived();
+		personData[3] = (String) ui.motherBox.getSelectedItem();
+		personData[4] = (String) ui.fatherBox.getSelectedItem();
+		personData[5] = getIsMe();
+		return personData;
+	}
+
+	private String getName() {
+		String name = "";
+		name += ui.firstNameBox.getText() + " ";
+		if (!(ui.midNameBox.getText().equals("")))
+			name += ui.midNameBox.getText() + " ";
+		name += ui.lastNameBox.getText();
+		return name;
+	}
+
+	private String getGender() {
+		String gender = "false";
+		return gender;
+	}
+
+	private String getLived() {
+		String lived = "";
+
+		return lived;
+	}
+
+	private String getIsMe() {
+		String isMe = "false";
+		return isMe;
 	}
 
 	@Override

@@ -18,25 +18,25 @@ public class NewPersonUIHeader extends JFrame {
 	private static final long serialVersionUID = 8644490432157613240L;
 
 	// Controller
-	NewPersonUIController ctrl;
+	public NewPersonUIController ctrl;
 
-	JPanel panel = new JPanel();
+	JPanel personPanel = new JPanel();
 	
-	JLabel nameLabel1 = new JLabel("First Name");
-	JTextField nameBox1 = new JTextField();
-	JLabel nameLabel2 = new JLabel("Middle Name");
-	JTextField nameBox2 = new JTextField();
-	JLabel nameLabel3 = new JLabel("Last Name");
-	JTextField nameBox3 = new JTextField();
+	JLabel firstNameLabel = new JLabel("First Name");
+	public JTextField firstNameBox = new JTextField();
+	JLabel midNameLabel = new JLabel("Middle Name");
+	public JTextField midNameBox = new JTextField();
+	JLabel lastNameLabel = new JLabel("Last Name");
+	public JTextField lastNameBox = new JTextField();
 	
 	JLabel motherLabel = new JLabel("Mother");
-	JComboBox<String> motherBox = new JComboBox<String>(Main.DUMDUM.peopleNames);
+	public JComboBox<String> motherBox = new JComboBox<String>(Main.DUMDUM.peopleNames);
 	
 	JLabel fatherLabel = new JLabel("Father");
-	JComboBox<String> fatherBox = new JComboBox<String>(Main.DUMDUM.peopleNames);
+	public JComboBox<String> fatherBox = new JComboBox<String>(Main.DUMDUM.peopleNames);
 
-	JButton browse = new JButton("Browse");
-	public JButton cancel = new JButton("Cancel");
-	public JButton save1 = new JButton("Save and Close");
-	public JButton save2 = new JButton("Save and Make Another");
+	JButton browseButton = new JButton("Browse");
+	public JButton cancelButton = new JButton("Cancel");
+	public JButton saveAndCloseButton = new JButton("Save and Close");
+	public JButton saveAndAnotherButton = new JButton("Save and Make Another");
 }

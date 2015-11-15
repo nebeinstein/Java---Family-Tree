@@ -37,71 +37,71 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-		panel.setSize(500,400);
-		panel.setLayout(null);
-		add(panel, BorderLayout.CENTER);
+		personPanel.setSize(500,400);
+		personPanel.setLayout(null);
+		add(personPanel, BorderLayout.CENTER);
 
-		nameLabel1.setLocation(39, 39);
-		nameLabel1.setSize(96, 25);
-		nameLabel1.setHorizontalAlignment(JLabel.CENTER);
-		panel.add(nameLabel1);
+		firstNameLabel.setLocation(39, 39);
+		firstNameLabel.setSize(96, 25);
+		firstNameLabel.setHorizontalAlignment(JLabel.CENTER);
+		personPanel.add(firstNameLabel);
 
-		nameBox1.setLocation(145, 39);
-		nameBox1.setSize(274, 25);
-		panel.add(nameBox1);
+		firstNameBox.setLocation(145, 39);
+		firstNameBox.setSize(274, 25);
+		personPanel.add(firstNameBox);
 
-		nameLabel2.setLocation(39, 79);
-		nameLabel2.setSize(96, 25);
-		nameLabel2.setHorizontalAlignment(JLabel.CENTER);
-		panel.add(nameLabel2);
+		midNameLabel.setLocation(39, 79);
+		midNameLabel.setSize(96, 25);
+		midNameLabel.setHorizontalAlignment(JLabel.CENTER);
+		personPanel.add(midNameLabel);
 
-		nameBox2.setLocation(145, 79);
-		nameBox2.setSize(274, 25);
-		panel.add(nameBox2);
+		midNameBox.setLocation(145, 79);
+		midNameBox.setSize(274, 25);
+		personPanel.add(midNameBox);
 
-		nameLabel3.setLocation(39, 119);
-		nameLabel3.setSize(96, 25);
-		nameLabel3.setHorizontalAlignment(JLabel.CENTER);
-		panel.add(nameLabel3);
+		lastNameLabel.setLocation(39, 119);
+		lastNameLabel.setSize(96, 25);
+		lastNameLabel.setHorizontalAlignment(JLabel.CENTER);
+		personPanel.add(lastNameLabel);
 
-		nameBox3.setLocation(145, 119);
-		nameBox3.setSize(274, 25);
-		panel.add(nameBox3);
+		lastNameBox.setLocation(145, 119);
+		lastNameBox.setSize(274, 25);
+		personPanel.add(lastNameBox);
 
 		motherLabel.setLocation(39, 159);
 		motherLabel.setSize(96, 25);
 		motherLabel.setHorizontalAlignment(JLabel.CENTER);
-		panel.add(motherLabel);
+		personPanel.add(motherLabel);
 
 		motherBox.setLocation(145, 159);
 		motherBox.setSize(274, 25);
 		motherBox.addItem("--- Unknown ---");
-		panel.add(motherBox);
+		personPanel.add(motherBox);
 
 		fatherLabel.setLocation(39, 199);
 		fatherLabel.setSize(96, 25);
 		fatherLabel.setHorizontalAlignment(JLabel.CENTER);
-		panel.add(fatherLabel);
+		personPanel.add(fatherLabel);
 
 		fatherBox.setLocation(145, 199);
 		fatherBox.setSize(274, 25);
 		fatherBox.addItem("--- Unknown ---");
-		panel.add(fatherBox);
+		personPanel.add(fatherBox);
 
-		cancel.setLocation(373, 325);
-		cancel.setSize(96, 25);
-		cancel.addActionListener(ctrl);
-		panel.add(cancel);
+		cancelButton.setLocation(373, 325);
+		cancelButton.setSize(96, 25);
+		cancelButton.addActionListener(ctrl);
+		personPanel.add(cancelButton);
 
-		save1.setLocation(202, 325);
-		save1.setSize(146, 25);
-		save1.addActionListener(ctrl);
-		panel.add(save1);
+		saveAndCloseButton.setLocation(202, 325);
+		saveAndCloseButton.setSize(146, 25);
+		saveAndCloseButton.addActionListener(ctrl);
+		personPanel.add(saveAndCloseButton);
 		
-		save2.setLocation(31, 325);
-		save2.setSize(146, 25);
-		save2.addActionListener(ctrl);
-		panel.add(save2);
+		saveAndAnotherButton.setLocation(31, 325);
+		saveAndAnotherButton.setSize(146, 25);
+		saveAndAnotherButton.addActionListener(ctrl);
+		personPanel.add(saveAndAnotherButton);
 	}
 
 	@Override

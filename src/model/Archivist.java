@@ -31,7 +31,7 @@ public class Archivist {
 	 * Interprets lines loaded from the file into usable data.
 	 */
 	public void interpret() {
-		this.say("Interpreting...");
+		say("Interpreting...");
 		while (location < lines.size()) {
 			String s = lines.get(location);
 			if (s.contains("person")) {
@@ -39,8 +39,8 @@ public class Archivist {
 			}
 			location++;
 		}
-		this.say("Done.");
-		this.say(this.people.size() + " People Loaded...");
+		say("Done.");
+		say(this.people.size() + " People Loaded...");
 	}
 	
 	/**

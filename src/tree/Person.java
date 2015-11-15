@@ -5,41 +5,40 @@ import central.Main;
 public class Person implements Tree {
 
 	private String name;
-	String gender;
+	private boolean gender;
 	String lived;
-	String mother;
-	String father;
-	String me;
-
+	boolean me;
 	Tree mom;
 	Tree dad;
 
 	public Person(String Name, String Gender, String Lived, String Mother,
 			String Father, String Me) {
 		name = Name;
-		gender = Gender;
+		gender = Boolean.getBoolean(Gender);
 		lived = Lived;
-		mother = Mother;
-		father = Father;
-		me = Me;
+		mom = findPersonByName(Mother);
+		dad = findPersonByName(Father);
+		me = Boolean.getBoolean(Me);
+		
 	}
 
 	public Person(String[] personData) {
 		int i = 0;
 		name = personData[i++];
-		gender = personData[i++];
+		gender = Boolean.getBoolean(personData[i++]);
 		lived = personData[i++];
-		mother = personData[i++];
-		father = personData[i++];
-		me = personData[i++];
+		mom = findPersonByName(personData[i++]);
+		dad = findPersonByName(personData[i++]);
+		me = Boolean.getBoolean(personData[i++]);
+		
 	}
 
 	public String toString() {
 		String s = name;
 		s += ";" + gender;
 		s += ";" + lived;
-		s += ";" + mother;
-		s += ";" + father;
+		s += ";" + mom.getName();
+		s += ";" + dad.getName();
 		s += ";" + me;
 		s += ";";
 		return s;
@@ -55,30 +54,15 @@ public class Person implements Tree {
 			i++;
 		}
 		return p;
-
-	}
-
-	public Tree findMum() {
-		Tree p = findPersonByName(mother);
-		return p;
-	}
-
-	public Tree findDad() {
-		Tree p = findPersonByName(father);
-		return p;
 	}
 
 	@Override
 	public int count() {
-		mom = findMum();
-		dad = findDad();
 		return (1 + mom.count() + dad.count());
 	}
 
 	@Override
 	public int gens() {
-		mom = findMum();
-		dad = findDad();
 		if (mom.gens() > dad.gens()) {
 			return (1 + mom.gens());
 		} else {
@@ -89,6 +73,10 @@ public class Person implements Tree {
 	@Override
 	public String getName() {
 		return name;
+	}
+
+	public boolean getGender() {
+		return gender;
 	}
 
 }
