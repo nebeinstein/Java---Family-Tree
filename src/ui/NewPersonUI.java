@@ -109,6 +109,7 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 
 		yesButton.setLocation(170, 282);
 		yesButton.setSize(20, 20);
+		yesButton.addActionListener(ctrl);
 		personPanel.add(yesButton);
 
 		noLabel.setLocation(200, 279);
@@ -118,6 +119,8 @@ public class NewPersonUI extends NewPersonUIHeader implements UI {
 
 		noButton.setLocation(225, 282);
 		noButton.setSize(20, 20);
+		noButton.setSelected(true);
+		noButton.addActionListener(ctrl);
 		personPanel.add(noButton);
 
 		cancelButton.setLocation(373, 325);

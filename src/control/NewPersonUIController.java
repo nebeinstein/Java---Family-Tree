@@ -15,6 +15,21 @@ public class NewPersonUIController implements Controller {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == ui.cancelButton)
 			ui.dispose();
+		if (e.getSource() == ui.yesButton)
+			isMe(0);
+		if (e.getSource() == ui.noButton)
+			isMe(1);
+
+	}
+
+	public void isMe(int button) {
+		if (button == 0) {
+			if (ui.yesButton.isSelected())
+				ui.noButton.setSelected(false);
+		} else if (button == 1) {
+			if (ui.noButton.isSelected())
+				ui.yesButton.setSelected(false);
+		}
 
 	}
 
@@ -40,6 +55,8 @@ public class NewPersonUIController implements Controller {
 
 	private String getGender() {
 		String gender = "false";
+		if (ui.genderBox.getSelectedItem().equals("Female"))
+			gender = "true";
 		return gender;
 	}
 
@@ -51,6 +68,7 @@ public class NewPersonUIController implements Controller {
 
 	private String getIsMe() {
 		String isMe = "false";
+		if (ui.yesButton.isSelected()) isMe = "true";
 		return isMe;
 	}
 

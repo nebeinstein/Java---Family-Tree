@@ -32,7 +32,7 @@ public class NewPersonUIHeader extends JFrame {
 
 	JLabel genderLabel = new JLabel("Sex");
 	public JComboBox<String> genderBox = new JComboBox<String>(new String[] {
-			"male", "female" });
+			"Male", "Female" });
 
 	JLabel motherLabel = new JLabel("Mother");
 	public JComboBox<String> motherBox = new JComboBox<String>(
